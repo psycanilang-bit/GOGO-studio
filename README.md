@@ -434,8 +434,8 @@ npm run dev
 
 ## 📞 联系方式
 
-* **作者**: Your Name
-* **Email**: your.email@example.com
+* **作者**: 汤集
+* **Email**: 17727107916@163.com
 * **GitHub**: [@psycanilang-bit](https://www.google.com/search?q=https://github.com/psycanilang-bit)
 * **问题反馈**: [GitHub Issues](https://www.google.com/search?q=https://github.com/psycanilang-bit/gogo-studio/issues)
 
