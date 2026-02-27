@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(\"C:\\\\Program Files\\\\nodejs\\\\npm.cmd\" install:*)",
+      "Bash(\"C:\\\\Program Files\\\\nodejs\\\\npm.cmd\" run:*)",
+      "Bash(node:*)",
+      "Bash(ls:*)",
+      "Bash(\"C:\\\\Program Files\\\\nodejs\\\\npm.cmd\" run dev:*)",
+      "Bash(npm run build)",
+      "Bash(python:*)",
+      "Bash(timeout 30 npm run dev:*)",
+      "Bash(test:*)",
+      "Bash(cut:*)"
+    ]
+  }
+}

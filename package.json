@@ -1,0 +1,41 @@
+{
+  "name": "gogo-studio",
+  "displayName": "GOGO Studio",
+  "version": "0.1.0",
+  "description": "互斥双模式网页交互工具：GOGO阅读标注 + DOM Hunter元素猎手",
+  "author": "Your Name",
+  "scripts": {
+    "dev": "plasmo dev",
+    "build": "plasmo build",
+    "package": "plasmo package"
+  },
+  "dependencies": {
+    "@plasmohq/messaging": "^0.6.2",
+    "@plasmohq/storage": "^1.9.3",
+    "plasmo": "^0.90.5",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "sharp": "^0.34.5"
+  },
+  "devDependencies": {
+    "@types/chrome": "^0.0.258",
+    "@types/node": "^20.11.5",
+    "@types/react": "18.2.48",
+    "@types/react-dom": "18.2.18",
+    "typescript": "5.3.3"
+  },
+  "manifest": {
+    "host_permissions": [
+      "<all_urls>"
+    ],
+    "permissions": [
+      "sidePanel",
+      "storage",
+      "tabs",
+      "clipboardWrite"
+    ],
+    "side_panel": {
+      "default_path": "sidepanel.html"
+    }
+  }
+}

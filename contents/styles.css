@@ -1,0 +1,123 @@
+/**
+ * GOGO Studio 全局样式
+ * 注入到页面的样式（非Shadow DOM）
+ */
+
+/* GOGO高亮样式 */
+mark[data-gogo-id] {
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+mark.gogo-highlight-agree {
+  background-color: #d4edda;
+  border-bottom: 2px solid #28a745;
+}
+
+mark.gogo-highlight-agree:hover {
+  background-color: #c3e6cb;
+}
+
+mark.gogo-highlight-question {
+  background-color: #fff3cd;
+  border-bottom: 2px solid #ffc107;
+}
+
+mark.gogo-highlight-question:hover {
+  background-color: #ffeaa7;
+}
+
+mark.gogo-highlight-flash {
+  animation: gogo-flash 1s ease-in-out;
+}
+
+@keyframes gogo-flash {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.3;
+  }
+}
+
+/* Hunter模式光标 - 使用data-mode属性精确控制 */
+body[data-mode='hunter'] {
+  cursor: crosshair !important;
+}
+
+body[data-mode='hunter'] * {
+  cursor: crosshair !important;
+}
+
+/* GOGO模式 - 不设置body光标，让浏览器自然处理 */
+/* 只给特定元素设置光标 */
+
+/* GOGO模式下高亮标记可点击 */
+body[data-mode='gogo'] mark[data-gogo-id] {
+  cursor: pointer !important;
+}
+
+/* 标注菜单和tooltip内的按钮 */
+.gogo-annotation-menu button,
+.gogo-highlight-tooltip button {
+  cursor: pointer !important;
+}
+
+/* Toast动画 */
+@keyframes gogo-toast-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 简约按钮样式 */
+.gogo-button {
+  padding: 8px 16px;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  background: white;
+  cursor: pointer;
+  font-size: 14px;
+  font-family: system-ui, -apple-system, sans-serif;
+  transition: all 0.2s;
+}
+
+.gogo-button:hover {
+  background: #f5f5f5;
+  border-color: #4a90e2;
+}
+
+.gogo-button:active {
+  transform: scale(0.98);
+}
+
+.gogo-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* 滚动条样式 */
+.gogo-scrollbar::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.gogo-scrollbar::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 4px;
+}
+
+.gogo-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #999;
+}
+
+.gogo-scrollbar::-webkit-scrollbar-track {
+  background: #f5f5f5;
+}
